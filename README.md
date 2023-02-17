@@ -18,7 +18,7 @@ A Discord bot made for Psi Beta Rho. :)
 ## Getting ready to push/Making Pull Request
 0. Make commits as needed.
 1. `git pull origin --rebase` to make sure your code is up-to-date. If this is unsuccessful, you may need to manually resolve conflicts by editing files
-2. `yarn -c prettier --write **/*.js` to enforce coding formatting
+2. `yarn prettier --write **/*.js` to enforce coding formatting
 3. `git add . && git commit` the prettier change if any files changed
 4. `git push origin BRANCHNAME` to push to remote branch of new name
 5. Open Pull Request in Github website
