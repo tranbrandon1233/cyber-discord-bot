@@ -10,6 +10,14 @@ A Discord bot made for Psi Beta Rho. :)
 4. [Invite your discord bot to our shared testing discord server](https://discordjs.guide/preparations/adding-your-bot-to-servers.html#creating-and-using-your-invite-link). If you need admin, let me (Alec) know.
 5. Add the token from step 3 into the .env in the proper location. Make sure there are no extra spaces between the text and the equals sign!
 6. Replace GUILD_ID with the server id you are testing in, CLIENT_ID with the discord bot user id, and OWNER_ID with your user id (this is used solely for /eval). Getting IDs: https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-
+7. Before making new changes, do `git checkout -b BRANCHNAME` where BRANCHNAME is a name for whatever feature you are working on.
 ## Running
 1. If this is the first time you are running OR you changed the format of slash commands, refresh them by running `node node utilities/deploy-guild-commands.js`
 2. Run `node index.js` to run the bot
+## Getting ready to push/Making Pull Request
+0. Make commits as needed.
+1. `git pull origin --rebase` to make sure your code is up-to-date. If this is unsuccessful, you may need to manually resolve conflicts by editing files
+2. `yarn -c prettier --write **/*.js` to enforce coding formatting
+3. `git add . && git commit` the prettier change if any files changed
+4. `git push origin BRANCHNAME` to push to remote branch of new name
+5. Open Pull Request in Github website
