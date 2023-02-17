@@ -12,7 +12,7 @@ A Discord bot made for Psi Beta Rho. :)
 6. Replace GUILD_ID with the server id you are testing in, CLIENT_ID with the discord bot user id, and OWNER_ID with your user id (this is used solely for /eval). Getting IDs: https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-
 7. Before making new changes, do `git checkout -b BRANCHNAME` where BRANCHNAME is a name for whatever feature you are working on.
 ## Running
-1. If this is the first time you are running OR you changed the format of slash commands, refresh them by running `node node utilities/deploy-guild-commands.js`
+1. If this is the first time you are running OR you changed the format of slash commands, refresh them by running `node utilities/deploy-guild-commands.js`
 2. Run `node index.js` to run the bot
 - Do NOT run multiple copies of a bot under a single bot token, otherwise weird issues may occur!
 ## Getting ready to push/Making Pull Request
