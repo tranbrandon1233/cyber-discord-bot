@@ -1,4 +1,6 @@
 {
+  "name": "cyber-discord-bot",
+  "packageManager": "yarn@3.4.1",
   "dependencies": {
     "discord.js": "^14.7.1",
     "dotenv": "^16.0.3"
@@ -7,5 +9,10 @@
     "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
     "prettier": "2.8.4"
+  },
+  "scripts": {
+    "start": "yarn node index.js",
+    "deploy": "yarn node utilities/deploy-guild-commands.js",
+    "fix": "yarn prettier --write **/*.js"
   }
 }
