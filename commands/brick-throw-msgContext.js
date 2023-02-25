@@ -9,7 +9,7 @@ module.exports = {
     .setType(ApplicationCommandType.Message),
   async execute(interaction) {
     await interaction.reply({
-      content: `${interaction.targetMessage.user}, ${interaction.user} threw a :bricks: at you!`,
+      content: `${interaction.targetMessage.author}, ${interaction.user} threw a :bricks: at you!`,
     });
   },
 };
