@@ -145,3 +145,6 @@ dist
 
 # Macos
 .DS_Store
+
+# Cyber Bot Config
+config.json
