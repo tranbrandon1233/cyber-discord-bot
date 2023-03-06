@@ -12,7 +12,10 @@ module.exports = {
         .setName("throw")
         .setDescription("Throw a brick at someone")
         .addUserOption((option) =>
-          option.setName("target").setDescription("User to throw brick at")
+          option
+            .setName("target")
+            .setDescription("User to throw brick at")
+            .setRequired(true)
         )
     ),
   async execute(interaction) {

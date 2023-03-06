@@ -5,7 +5,8 @@ module.exports = {
   async execute(interaction) {
     if (
       !interaction.isChatInputCommand() &&
-      !interaction.isMessageContextMenuCommand()
+      !interaction.isMessageContextMenuCommand() &&
+      !interaction.isUserContextMenuCommand()
     )
       return;
 

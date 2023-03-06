@@ -5,7 +5,7 @@ const {
 
 module.exports = {
   data: new ContextMenuCommandBuilder()
-    .setName("Throw Brick")
+    .setName("Throw Brick At")
     .setType(ApplicationCommandType.User),
   async execute(interaction) {
     await interaction.reply({
