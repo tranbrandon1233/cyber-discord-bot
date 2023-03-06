@@ -148,3 +148,6 @@ dist
 
 # Cyber Bot Config
 config.json
+
+# Data folder (database)
+data/
