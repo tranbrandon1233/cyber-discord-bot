@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize");
 const sequelize = new Sequelize({
-  dialect: 'sqlite',
-  storage: 'data/database.sqlite'
+  dialect: "sqlite",
+  storage: "data/database.sqlite",
 });
 
 reminders = sequelize.define("reminders", {
