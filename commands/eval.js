@@ -20,7 +20,7 @@ module.exports = {
     }
     let result = "";
     try {
-      result += eval(interaction.options.getString("code"));
+      result += await eval(interaction.options.getString("code"));
     } catch (err) {
       result += "\n\nAn error occurred:\n" + err.toString();
     }
