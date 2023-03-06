@@ -5,6 +5,9 @@ const path = require("node:path");
 // Require the necessary discord.js classes
 const { Client, Collection, Events, GatewayIntentBits } = require("discord.js");
 
+// Load config
+require("./utilities/config.js");
+
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
