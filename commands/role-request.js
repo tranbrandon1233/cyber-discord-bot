@@ -3,12 +3,13 @@ const {
   ButtonBuilder,
   ButtonStyle,
   SlashCommandBuilder,
+  PermissionsBitField,
 } = require("discord.js");
 
 module.exports = {
-  data: new SlashCommandBuilder()
+  data: new SlashCommandBuilder().setDefaultMemberPermissions(PermissionsBitField.Administrator)
     .setName("request-role")
-    .setDescription("Request a role."),
+    .setDescription("Send a message to allow you to choose a role."),
   async execute(interaction) {
     const row = new ActionRowBuilder().addComponents(
       new ButtonBuilder()
@@ -29,11 +30,17 @@ module.exports = {
         content: "You have been given the Cyber Academy role.",
         ephemeral: true,
       });
+      interaction.inCachedGuild()
+      const role  = interaction.guild.roles.cache.find(r => r.name === 'Cyber Academy');
+      await interaction.member.roles.add(role);;
     } else if (interaction.customId === "role-request--special-topics") {
       await interaction.reply({
         content: "You have been given the Special Topics role.",
         ephemeral: true,
       });
+      interaction.inCachedGuild()
+      const role  = interaction.guild.roles.cache.find(r => r.name === 'Special Topics');
+      await interaction.member.roles.add(role);;
     }
   },
 };
