@@ -19,5 +19,13 @@ module.exports = {
 			);
 
 		await interaction.reply({ content: 'Choose a role: ', components: [row] });
+	},
+	async onMessageInteraction(interaction) {
+		if (interaction.customId === 'role-request--cyber-academy') {
+			await interaction.reply({ content: 'You have been given the Cyber Academy role.', ephemeral: true });
+		}
+		else if (interaction.customId === 'role-request--special-topics') {
+			await interaction.reply({ content: 'You have been given the Special Topics role.', ephemeral: true });
+		}
 	}
 };
