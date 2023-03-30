@@ -2,8 +2,10 @@
   "name": "cyber-discord-bot",
   "packageManager": "yarn@3.4.1",
   "dependencies": {
+    "@google-cloud/local-auth": "^2.1.1",
     "discord.js": "^14.7.1",
     "dotenv": "^16.0.3",
+    "googleapis": "^114.0.0",
     "sequelize": "^6.29.0",
     "sqlite3": "^5.1.5"
   },
