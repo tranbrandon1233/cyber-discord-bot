@@ -5,7 +5,6 @@ const {
   ButtonBuilder,
   ButtonStyle,
 } = require("discord.js");
-const config = require("../utilities/config");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("pbr")
@@ -36,7 +35,7 @@ module.exports = {
         await interaction.deferReply({ ephemeral: true });
         const row = new ActionRowBuilder().addComponents(
           new ButtonBuilder()
-            .setCustomId("pbr--application")
+            .setCustomId("pbr-app--application")
             .setLabel("Apply!")
             .setStyle(ButtonStyle.Primary)
         );
@@ -47,20 +46,5 @@ module.exports = {
         await interaction.followUp({ content: "Sent!", ephemeral: true });
       }
     }
-  },
-
-  async onMessageInteraction(interaction) {
-    let customURL = config["pbr"]["application link"];
-    // {{DISCORD_USERNAME}}&entry.511297996={{DISCORD_ID}}&entry.1959556633={{YEARS_PBR}}
-    let userRoles = interaction.member.roles.cache.filter((role) =>
-      role.name.startsWith("cyber paladin")
-    );
-    let quarters = userRoles.size;
-    customURL = customURL
-      .replace("{{DISCORD_USERNAME}}", encodeURIComponent(interaction.user.tag))
-      .replace("{{DISCORD_ID}}", interaction.user.id)
-      .replace("{{YEARS_PBR}}", quarters);
-    console.log(customURL);
-    await interaction.reply({ content: customURL, ephemeral: true });
   },
 };
