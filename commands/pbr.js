@@ -4,12 +4,13 @@ const {
   ActionRowBuilder,
   ButtonBuilder,
   ButtonStyle,
+  PermissionFlagsBits
 } = require("discord.js");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("pbr")
     .setDescription("PBR stuff")
-    .setDefaultMemberPermissions(PermissionsBitField.Administrator)
+    .setDefaultMemberPermissions(PermissionFlagsBits.Administrator)
     .addSubcommandGroup((group) =>
       group
         .setName("admin")
