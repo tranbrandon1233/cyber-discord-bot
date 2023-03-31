@@ -643,14 +643,14 @@ __metadata:
   resolution: "cyber-discord-bot@workspace:."
   dependencies:
     "@google-cloud/local-auth": ^2.1.1
-    discord.js: ^14.7.1
+    discord.js: ^14.8.0
     dotenv: ^16.0.3
-    eslint: ^8.34.0
-    eslint-config-prettier: ^8.6.0
+    eslint: ^8.37.0
+    eslint-config-prettier: ^8.8.0
     googleapis: ^114.0.0
-    prettier: 2.8.4
-    sequelize: ^6.29.0
-    sqlite3: ^5.1.5
+    prettier: 2.8.7
+    sequelize: ^6.30.0
+    sqlite3: ^5.1.6
   languageName: unknown
   linkType: soft
 
@@ -701,7 +701,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"discord.js@npm:^14.7.1":
+"discord.js@npm:^14.8.0":
   version: 14.8.0
   resolution: "discord.js@npm:14.8.0"
   dependencies:
@@ -791,7 +791,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^8.6.0":
+"eslint-config-prettier@npm:^8.8.0":
   version: 8.8.0
   resolution: "eslint-config-prettier@npm:8.8.0"
   peerDependencies:
@@ -819,7 +819,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.34.0":
+"eslint@npm:^8.37.0":
   version: 8.37.0
   resolution: "eslint@npm:8.37.0"
   dependencies:
@@ -2025,12 +2025,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.8.4":
-  version: 2.8.4
-  resolution: "prettier@npm:2.8.4"
+"prettier@npm:2.8.7":
+  version: 2.8.7
+  resolution: "prettier@npm:2.8.7"
   bin:
     prettier: bin-prettier.js
-  checksum: c173064bf3df57b6d93d19aa98753b9b9dd7657212e33b41ada8e2e9f9884066bb9ca0b4005b89b3ab137efffdf8fbe0b462785aba20364798ff4303aadda57e
+  checksum: fdc8f2616f099f5f0d685907f4449a70595a0fc1d081a88919604375989e0d5e9168d6121d8cc6861f21990b31665828e00472544d785d5940ea08a17660c3a6
   languageName: node
   linkType: hard
 
@@ -2183,7 +2183,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sequelize@npm:^6.29.0":
+"sequelize@npm:^6.30.0":
   version: 6.30.0
   resolution: "sequelize@npm:6.30.0"
   dependencies:
@@ -2313,7 +2313,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sqlite3@npm:^5.1.5":
+"sqlite3@npm:^5.1.6":
   version: 5.1.6
   resolution: "sqlite3@npm:5.1.6"
   dependencies:
