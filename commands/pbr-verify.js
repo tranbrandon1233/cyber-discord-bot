@@ -38,7 +38,9 @@ module.exports = {
   async onMessageInteraction(interaction) {
     await interaction.deferReply({ ephemeral: true });
     if (
-      interaction.member.roles.cache.some((role) => role.name.startsWith("PBR (ψβρ)"))
+      interaction.member.roles.cache.some((role) =>
+        role.name.startsWith("PBR (ψβρ)")
+      )
     ) {
       await interaction.followUp({
         ephemeral: true,
