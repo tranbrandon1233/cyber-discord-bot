@@ -35,7 +35,7 @@ module.exports = {
     );
     if (
       !interaction.member.roles.cache.some((role) =>
-        role.name.startsWith("PBR")
+        role.name.startsWith("PBR (ψβρ)")
       )
     ) {
       buttonRow.addComponents(

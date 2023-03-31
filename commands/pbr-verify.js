@@ -38,7 +38,7 @@ module.exports = {
   async onMessageInteraction(interaction) {
     await interaction.deferReply({ ephemeral: true });
     if (
-      interaction.member.roles.cache.some((role) => role.name.startsWith("PBR"))
+      interaction.member.roles.cache.some((role) => role.name.startsWith("PBR (ψβρ)"))
     ) {
       await interaction.followUp({
         ephemeral: true,
@@ -50,7 +50,7 @@ module.exports = {
     if (submitted) {
       await interaction.member.roles.add(
         interaction.guild.roles.cache.find((role) =>
-          role.name.startsWith("PBR")
+          role.name.startsWith("PBR (ψβρ)")
         )
       );
       await interaction.followUp({
