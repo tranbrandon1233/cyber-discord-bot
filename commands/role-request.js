@@ -25,12 +25,12 @@ module.exports = {
     await interaction.reply({ content: "Choose a role: ", components: [row] });
   },
   async onMessageInteraction(interaction) {
+    interaction.inCachedGuild()
     if (interaction.customId === "role-request--cyber-academy") {
       await interaction.reply({
         content: "You have been given the Cyber Academy role.",
         ephemeral: true,
       });
-      interaction.inCachedGuild()
       const role  = interaction.guild.roles.cache.find(r => r.name === 'Cyber Academy');
       await interaction.member.roles.add(role);;
     } else if (interaction.customId === "role-request--special-topics") {
@@ -38,7 +38,6 @@ module.exports = {
         content: "You have been given the Special Topics role.",
         ephemeral: true,
       });
-      interaction.inCachedGuild()
       const role  = interaction.guild.roles.cache.find(r => r.name === 'Special Topics');
       await interaction.member.roles.add(role);;
     }
