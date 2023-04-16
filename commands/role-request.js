@@ -7,7 +7,8 @@ const {
 } = require("discord.js");
 
 module.exports = {
-  data: new SlashCommandBuilder().setDefaultMemberPermissions(PermissionsBitField.Administrator)
+  data: new SlashCommandBuilder()
+    .setDefaultMemberPermissions(PermissionsBitField.Administrator)
     .setName("request-role")
     .setDescription("Send a message to allow you to choose a role."),
   async execute(interaction) {
@@ -25,21 +26,25 @@ module.exports = {
     await interaction.reply({ content: "Choose a role: ", components: [row] });
   },
   async onMessageInteraction(interaction) {
-    interaction.inCachedGuild()
+    interaction.inCachedGuild();
     if (interaction.customId === "role-request--cyber-academy") {
       await interaction.reply({
         content: "You have been given the Cyber Academy role.",
         ephemeral: true,
       });
-      const role  = interaction.guild.roles.cache.find(r => r.name === 'Cyber Academy');
-      await interaction.member.roles.add(role);;
+      const role = interaction.guild.roles.cache.find(
+        (r) => r.name === "Cyber Academy"
+      );
+      await interaction.member.roles.add(role);
     } else if (interaction.customId === "role-request--special-topics") {
       await interaction.reply({
         content: "You have been given the Special Topics role.",
         ephemeral: true,
       });
-      const role  = interaction.guild.roles.cache.find(r => r.name === 'Special Topics');
-      await interaction.member.roles.add(role);;
+      const role = interaction.guild.roles.cache.find(
+        (r) => r.name === "Special Topics"
+      );
+      await interaction.member.roles.add(role);
     }
   },
 };
