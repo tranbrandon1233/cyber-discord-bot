@@ -1,3 +1,7 @@
+# google auth credential files
+credentials.json
+token.json
+
 # Created by https://www.toptal.com/developers/gitignore/api/webstorm,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=webstorm,node
 
