@@ -28,23 +28,41 @@ module.exports = {
   async onMessageInteraction(interaction) {
     interaction.inCachedGuild();
     if (interaction.customId === "role-request--cyber-academy") {
-      await interaction.reply({
-        content: "You have been given the Cyber Academy role.",
-        ephemeral: true,
-      });
-      const role = interaction.guild.roles.cache.find(
-        (r) => r.name === "Cyber Academy"
-      );
-      await interaction.member.roles.add(role);
+      if(interaction.member.roles.cache.find((r) => r.name === "Cyber Academy") === undefined){
+        await interaction.reply({
+          content: "You have been given the Cyber Academy role.",
+          ephemeral: true,
+        });
+        const role = interaction.guild.roles.cache.find(
+          (r) => r.name === "Cyber Academy"
+        );
+        await interaction.member.roles.add(role);
+      }
+      else{
+        await interaction.reply({
+          content: "The Cyber Academy role has been removed.",
+          ephemeral: true,
+        });
+        await interaction.member.roles.remove(interaction.member.roles.cache.find((r) => r.name === "Cyber Academy"));
+      }
     } else if (interaction.customId === "role-request--special-topics") {
-      await interaction.reply({
-        content: "You have been given the Special Topics role.",
-        ephemeral: true,
-      });
-      const role = interaction.guild.roles.cache.find(
-        (r) => r.name === "Special Topics"
-      );
-      await interaction.member.roles.add(role);
+        if(interaction.member.roles.cache.find((r) => r.name === "Special Topics") === undefined){
+          await interaction.reply({
+          content: "You have been given the Special Topics role.",
+          ephemeral: true,
+        });
+        const role = interaction.guild.roles.cache.find(
+          (r) => r.name === "Special Topics"
+        );
+        await interaction.member.roles.add(role);
+      }
+      else{
+        await interaction.reply({
+          content: "The Special Topics role has been removed.",
+          ephemeral: true,
+        });
+        await interaction.member.roles.remove(interaction.member.roles.cache.find((r) => r.name === "Special Topics"));
+      }
     }
   },
 };
