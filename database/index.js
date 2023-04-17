@@ -4,7 +4,7 @@ const sequelize = new Sequelize({
   storage: "data/database.sqlite",
 });
 
-reminders = sequelize.define("reminders", {
+let reminders = sequelize.define("reminders", {
   discordID: {
     type: Sequelize.STRING,
     allowNull: false,
